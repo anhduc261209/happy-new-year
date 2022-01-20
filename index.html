@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year!</title>
+</head>
+
+<body>
+    <div align="center">
+        <video autoplay controls="controls" id="myvideo" loop/> 
+            <source src="tet_en_xuan_ve.mp4" type="video/mp4"> 
+        </video> 
+    </div>
+    <script defer>
+    /* Get the element you want displayed in fullscreen mode (a video in this example): */
+    var elem = document.getElementById("myvideo");
+
+    /* When the openFullscreen() function is executed, open the video in fullscreen.
+    Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
+    function openFullscreen() {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+      }
+    }
+    openFullscreen();
+    </script>
+</body>
+</html>
